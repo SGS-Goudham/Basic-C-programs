@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int seat;
+    scanf("%d",&num1);
+    if(seat>0 && seat<73)
+    {
+        if(seat%8==1 || seat%8==4)
+        printf("Lower Berth");
+        else if(seat%8==2 || seat%8==5)
+        printf("Middle Berth");
+        else if(seat%8==3 || seat%8==6)
+        printf("Upper Berth");
+        else if(seat%8==7)
+        printf("Side Lower");
+        else printf("Side Upper");
+    }
+    else printf("Invalid Input");
+    return 0;
+}
