@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{
+    int number, originalNumber, Count = 0, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    originalNumber = number;
+    while (originalNumber != 0) 
+    {
+        originalNumber /= 10;
+        Count++;
+    }
+    originalNumber = number;
+    while (originalNumber != 0) 
+    {
+        int digit = originalNumber % 10;
+        sum += pow(digit, Count);
+        originalNumber /= 10;
+        Count--;
+    }
+    if (sum == number)
+        printf("%d is a Disarium number.\n", number);
+    else
+        printf("%d is not a Disarium number.\n", number);
+
+    return  0;
+}
